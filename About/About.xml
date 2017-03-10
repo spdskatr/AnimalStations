@@ -3,5 +3,5 @@
 	<name>SS Animal Station</name>
 	<author>Spdskatr</author>
 	<targetVersion>0.16.1393</targetVersion>
-	<description>Adds an animal station that can take care of your animals by automatically collecting eggs / harvesting milk.</description>
+	<description>Adds animal stations that can take care of your animals by automatically shearing wool / harvesting milk. Double as feedong boxes.</description>
 </ModMetaData>
