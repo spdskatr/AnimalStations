@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>SS Animal Station</name>
+	<author>Spdskatr</author>
+	<targetVersion>0.16.1393</targetVersion>
+	<description>Adds an animal station that can take care of your animals by automatically collecting eggs / harvesting milk.</description>
+</ModMetaData>
