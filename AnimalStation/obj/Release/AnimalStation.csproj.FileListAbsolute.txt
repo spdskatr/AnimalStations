@@ -1,0 +1,9 @@
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\AnimalStation\bin\Release\AnimalStation.dll
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\AnimalStation\bin\Release\AnimalStation.pdb
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\AnimalStation\bin\Release\0Harmony.dll
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\AnimalStation\bin\Release\0Harmony.pdb
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\AnimalStation\obj\Release\AnimalStation.dll
+C:\Everything\AWESOME CODE STUFF\RimWorld - Dev tool for modders\Mods\[SS] AnimalStation\Assemblies\AnimalStation.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[SS] AnimalStations\Assemblies\AnimalStation.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[SS] AnimalStations\AnimalStation\obj\Release\AnimalStation.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[SS] AnimalStations\AnimalStation\obj\Release\AnimalStation.dll

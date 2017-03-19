@@ -2,9 +2,10 @@
 using System.Text;
 using Verse;
 using RimWorld;
-using Harmony;
 using UnityEngine;
 using FactoryFramework;
+using System;
+using System.Reflection;
 
 namespace AnimalStation
 {
@@ -95,12 +96,12 @@ namespace AnimalStation
                 if (p == null || p.Faction != Faction.OfPlayer) continue;
                 //BREAK POINT
                 CompMilkable milkablecomp = ((Pawn)p).GetComp<CompMilkable>();
-                Traverse traversable = Traverse.Create(milkablecomp); //Harmony used to access protected values
-                int i = GenMath.RoundRandom(traversable.Property("ResourceAmount").GetValue<int>() * milkablecomp.Fullness);
-                ThingDef resource = traversable.Property("ResourceDef").GetValue<ThingDef>();
+                Type reflection = milkablecomp.GetType();
+                int i = GenMath.RoundRandom((int)reflection.GetProperty("ResourceAmount", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(milkablecomp, null) * milkablecomp.Fullness);
+                ThingDef resource = (ThingDef)reflection.GetProperty("ResourceDef", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(milkablecomp, null);
                 if (i == 0 || resource.defName != "Milk") continue;
                 tryModifyStorage(ref i);
-                traversable.Field("fullness").SetValue(0f);
+                reflection.GetField("fullness", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(milkablecomp, 0f);
             }
         }
         public override string GetInspectString()
@@ -139,10 +140,10 @@ namespace AnimalStation
                 if (p == null || p.Faction != Faction.OfPlayer) continue;
                 //BREAK POINT
                 CompShearable shearablecomp = ((Pawn)p).GetComp<CompShearable>();
-                Traverse traversable = Traverse.Create(shearablecomp); //Harmony used to access protected values
-                int i = GenMath.RoundRandom(traversable.Property("ResourceAmount").GetValue<int>() * shearablecomp.Fullness);
+                Type reflection = shearablecomp.GetType();
+                int i = GenMath.RoundRandom((int)reflection.GetProperty("ResourceAmount", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(shearablecomp, null) * shearablecomp.Fullness);
                 if (i == 0) continue;
-                ThingDef resource = traversable.Property("ResourceDef").GetValue<ThingDef>();
+                ThingDef resource = (ThingDef)reflection.GetProperty("ResourceDef", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(shearablecomp, null);
                 while (i > 0)
                 {
                     int num = Mathf.Clamp(i, 1, resource.stackLimit);
@@ -151,7 +152,7 @@ namespace AnimalStation
                     thing.stackCount = num;
                     GenPlace.TryPlaceThing(thing, p.Position, p.Map, ThingPlaceMode.Near, null);
                 }
-                traversable.Field("fullness").SetValue(0f);
+                reflection.GetField("fullness", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(shearablecomp, 0f);
             }
         }
     }
