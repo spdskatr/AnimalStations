@@ -82,7 +82,7 @@
       <li>ITab_Storage</li>
     </inspectorTabs>
     <researchPrerequisites>
-      <li>Machining</li>
+      <li>AnimalStations</li>
     </researchPrerequisites>
     <surfaceType>Item</surfaceType>
   </ThingDef>
@@ -167,7 +167,7 @@
     <inspectorTabs>
       <li>ITab_Storage</li>
     </inspectorTabs>
-    <researchPrerequisites><li>Machining</li></researchPrerequisites>
+    <researchPrerequisites><li>AnimalStations</li></researchPrerequisites>
     <surfaceType>Item</surfaceType>
   </ThingDef>
   <ThingDef>
@@ -204,9 +204,9 @@
     <size>(2,2)</size>
     <costStuffCount>50</costStuffCount>
     <CostList>
-	    <Steel>50</Steel>
+	    <Steel>100</Steel>
       <Hay>50</Hay>
-      <Component>10</Component>
+      <Component>15</Component>
     </CostList>
     <stuffCategories>
       <li>Woody</li>
@@ -251,7 +251,7 @@
     <inspectorTabs>
       <li>ITab_Storage</li>
     </inspectorTabs>
-    <researchPrerequisites><li>Machining</li></researchPrerequisites>
+    <researchPrerequisites><li>AnimalStations</li></researchPrerequisites>
     <surfaceType>Item</surfaceType>
   </ThingDef>
 </Buildings>

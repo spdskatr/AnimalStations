@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalStation", "AnimalStation\AnimalStation.csproj", "{EC44C1F0-68EC-4382-A11F-079F062CB891}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62F05088-06E7-4C2A-B429-66060C402433}"
 	ProjectSection(SolutionItems) = preProject
 		Defs\Building.xml = Defs\Building.xml
+		Defs\Research.xml = Defs\Research.xml
 	EndProjectSection
 EndProject
 Global
